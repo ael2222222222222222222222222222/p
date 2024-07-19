@@ -204,10 +204,11 @@ if "%BLTWUI%"=="1" (
     Echo.
     Echo.
     powershell -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('DOWNLOADING. !!Permission Tweaks!!.', 'BlotwareUI', 'OK', [System.Windows.Forms.MessageBoxIcon]::Information);"
-    curl -g -k -L -# -o "%UserProfile%\AppData\Local\Temp\Permission.bat" "https://raw.githubusercontent.com/ael2222222222222222222222222222/p/main/Permission.bat"
-    call "%UserProfile%\AppData\Local\Temp\Permission.bat"
+    curl -g -k -L -# -o "%USERPROFILE%\AppData\Local\Temp\Permision.bat" "https://raw.githubusercontent.com/ael2222222222222222222222222222/p/main/Permision.bat"
+    call "%USERPROFILE%\AppData\Local\Temp\Permision.bat"
+    del /s /f /q "%USERPROFILE%\AppData\Local\Temp\Permision.bat"
     powershell -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('COMPLETED THE INSTALLATION. !!Permission Changed!!.', 'BlotwareUI', 'OK', [System.Windows.Forms.MessageBoxIcon]::Information);"
-    del /s /f /q "%UserProfile%\AppData\Local\Temp\Permission.bat"
+    del /s /f /q "%UserProfile%\AppData\Local\Temp\Permision.bat"
     goto BLTWUI
 ) else if "%BLTWUI%"=="BACK" (
     Echo.
